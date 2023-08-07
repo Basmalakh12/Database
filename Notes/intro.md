@@ -1,9 +1,7 @@
 # Introduction to database
 
 - A relational database is a collection of data with a structure that allows you to search and access related information or data points. It primarily consists of tables that organize and display data in a way that makes it easy for people to use.
-
 - is usually controlled by a database management system (DBMS)
-
 - A DBMS serves as an interface between the database and its end users or programs, allowing users to retrieve, update, and manage how the information is organized and optimized
 
 ## What Is an RDBMS?
