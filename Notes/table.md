@@ -44,3 +44,42 @@
 
 - Many-to-many
   - multiple records in the first table can relate to multiple records in the second table and vice versa.
+
+## Data Definition Language (DDL)
+
+- Data Definition Language (DDL) is used to create and modify the structure of objects in a database using predefined commands and a specific syntax. These database objects include tables, sequences, locations, aliases, schemas and indexes.
+
+- 1. CREATE Syntax
+  - CEATE TABLE [IF NOT EXISTS] TBL_NAME CHARACTER SET = utf8 COLLATE utf8_general_ci
+  - CEATE TABLE [IF NOT EXISTS] TBL_NAME LIKE TBL_NAME
+  - CEATE TABLE [IF NOT EXISTS] TBL_NAME SELECT_STMT
+
+  ```SQL
+   CREATE TABLE employees(
+    -> emp_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -> dob date not null,
+    -> address VARCHAR(50) NOT NULL,
+    -> salary DECIMAL(7,2) DEFAULT 1500.00,
+    -> gender ENUM('Male','Female') NOT NULL DEFAULT'Male',
+    -> position VARCHAR(20) NOT NULL, 
+    -> serial_number CHAR(30) NOT NULL);
+  ```
+
+- 2. ALTER Syntax
+  - ALTER TABLE [IF NOT EXISTS] TBL_NAME CHARACTER SET = utf8 COLLATE utf8_general_ci
+  - ADDING NEW COLUMNS:
+    - ALTER TABLE TBL_NAME ADD COLUMNS COL_NAME (DATA TYPE) [ATRIBUTE] [Constraints]
+  - MODIFYING EXISTING COLUMNS:
+    - ALTER TABLE TBL_NAME MODIFY COLUMNS COL_NAME (DATA TYPE) [ATRIBUTE] [Constraints]
+  - CHANGING EXISTING COLUMNS:
+    - ALTER TABLE TBL_NAME CHANGE COLUMNS OLD_COL_NAME NEW_COL_NAME (DATA TYPE) [ATRIBUTE] [Constraints]
+  - DELETINNG A COLUMN:
+    - ALTER TABLE TBL_NAME DROP COLUMNS COL_NAME
+
+- 3. DROP Syntax
+  - DROP TABLE [IF NOT EXISTS] TBL_NAME
+  - DROP TABLE TBL_NAME
+
+- 4. RENAME Syntax
+  - RENAME TABLE OLD_TBL_NAME TO NEW_TBL_NAME
+

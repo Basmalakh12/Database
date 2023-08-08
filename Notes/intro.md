@@ -21,20 +21,6 @@
 - Consistency
   - Relational databases show consistency throughout each transaction completed in the RDBMS. Consistency means that the rules and defining characteristics within the relational database remain the same throughout all the data points and after each transaction or query. It's also beneficial for users to work with consistent data across the relational database because the information updates across all the applications and programs. This means that users have access to the same data sets regardless of the commands or queries they run.
 
-## Data Definition Language (DDL)
-
-- Data Definition Language (DDL) is used to create and modify the structure of objects in a database using predefined commands and a specific syntax. These database objects include tables, sequences, locations, aliases, schemas and indexes.
-
-- 1. CREATE Syntax
-  - CEATE DATABASE IF NOT EXISTS employees CHARACTER SET = utf8 COLLATE utf8_general_ci;
-
-- 2. ALTER Syntax
-  - ALTER DATABASE IF NOT EXISTS company CHARACTER SET = utf8 COLLATE utf8_general_ci;
-
-- 3. DROP Syntax
-  - DROP DATABASE IF NOT EXISTS company;
-  - DROP DATABASE company;
-
 ## Relational databases vs. non-relational databases
 
 - A non-relational database stores and retrieves displayed and organized data, which may have no relation to each other, outside of a table format.
