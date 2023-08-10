@@ -141,3 +141,11 @@ alter table customers_products add constraint fk_customer_id2 foreign key (custo
 
 alter table customers_products add constraint fk_product_id2 foreign key ( product_id) references products( product_id);
 
+ describe customers_products
+    -> ;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| customer_id | int unsigned | NO   | PRI | NULL    | auto_increment |
+| product_id  | int unsigned | NO   | MUL | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
