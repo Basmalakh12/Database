@@ -1,4 +1,4 @@
-# Relationships between tables
+# DataBase Relationships
 
 - relationships are connections between two or more tables. These are important because they allow you to query data from multiple tables and combine these in a single result.
 - They also help establish meaning and organize data in a database in a way that makes sense to users.
