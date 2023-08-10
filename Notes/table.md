@@ -29,22 +29,6 @@
 - primary key is the parent table.
 - The values in a foreign key column can be duplicates
 
-## Relationships between tables
-
-- relationships are connections between two or more tables. These are important because they allow you to query data from multiple tables and combine these in a single result.
-- They also help establish meaning and organize data in a database in a way that makes sense to users.
-
-### There can be multiple relationships between tables in a database, and these can be any of these three types
-
-- One-to-one
-  - This describes a link between two tables, where one record or row in the first table connects to exactly one record or row in the second.
-
-- One-to-many
-  - one record in the first table can relate to multiple records or rows in the second table.
-
-- Many-to-many
-  - multiple records in the first table can relate to multiple records in the second table and vice versa.
-
 ## Data Definition Language (DDL)
 
 - Data Definition Language (DDL) is used to create and modify the structure of objects in a database using predefined commands and a specific syntax. These database objects include tables, sequences, locations, aliases, schemas and indexes.
