@@ -1,0 +1,57 @@
+# DML Data Manipulation Language
+
+- INSERT
+- UPDATA
+- DELET
+- SELECT
+
+## The SQL INSERT INTO Statement
+
+- The INSERT INTO statement is used to insert new records in a table.
+
+```sql
+ use store;
+
+ SHOW TABLES;
++----------------------+
+| Tables_in_store      |
++----------------------+
+| customers_products   |
+| products             |
+| products_orders      |
+| products_orders_list |
+| users                |
+| users_profiles       |
++----------------------+
+
+ describe users;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| user_id   | int unsigned | NO   | PRI | NULL    | auto_increment |
+| username  | varchar(30)  | NO   |     | NULL    |                |
+| password  | char(72)     | NO   |     | NULL    |                |
+| lastlogin | datetime     | YES  |     | NULL    |                |
+| privilege | tinyint(1)   | YES  |     | 2       |                |
++-----------+--------------+------+-----+---------+----------------+
+
+INSERT INTO users(username, password,lastlogin,privilege) VALUES('mohamed ',md5('yahia'),now() ,1);
+
+SELECT * FROM users;
++---------+----------+----------------------------------+---------------------+-----------+
+| user_id | username | password                         | lastlogin           | privilege |
++---------+----------+----------------------------------+---------------------+-----------+
+|       1 | mohamed  | 64832d781603ac2e962874ac918ad155 | 2023-08-11 01:52:12 |         1 |
++---------+----------+----------------------------------+---------------------+-----------+
+
+INSERT INTO users SET  username = 'ahmed',password = md5('ibrahim'), lastlogin = now(),privilege = 2;
+
+ SELECT * FROM users;
++---------+----------+----------------------------------+---------------------+-----------+
+| user_id | username | password                         | lastlogin           | privilege |
++---------+----------+----------------------------------+---------------------+-----------+
+|       1 | mohamed  | 64832d781603ac2e962874ac918ad155 | 2023-08-11 01:52:12 |         1 |
+|       2 | ahmed    | f1c083e61b32d3a9be76bc21266b0648 | 2023-08-11 02:07:23 |         2 |
++---------+----------+----------------------------------+---------------------+-----------+
+
+```
