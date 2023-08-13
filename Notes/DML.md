@@ -55,3 +55,33 @@ INSERT INTO users SET  username = 'ahmed',password = md5('ibrahim'), lastlogin =
 +---------+----------+----------------------------------+---------------------+-----------+
 
 ```
+
+## SQL UPDATE Statement
+
+- The UPDATE statement is used to modify the existing records in a table.
+
+```sql
+UPDATE  users SET  username = 'ahmed',password = md5('9876543') WHERE user_id = 2;
+UPDATE   users ,users2  SET  users.password = users2.password  WHERE user_id = 2;
+```
+
+## SQL DELETE Statement
+
+- The DELETE statement is used to delete existing records in a table.
+
+```sql
+ELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+DELETE FROM Customers;
+```
+
+## The SQL SELECT Statement
+
+```sql
+SELECT * FROM Customers WHERE Country='Germany' FETCH FIRST 3 ROWS ONLY;
+
+SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
+
+SELECT TOP 3 * FROM Customers WHERE Country='Germany';
+
+```
