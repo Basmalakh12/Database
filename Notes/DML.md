@@ -74,14 +74,3 @@ ELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 
 DELETE FROM Customers;
 ```
-
-## The SQL SELECT Statement
-
-```sql
-SELECT * FROM Customers WHERE Country='Germany' FETCH FIRST 3 ROWS ONLY;
-
-SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
-
-SELECT TOP 3 * FROM Customers WHERE Country='Germany';
-
-```
