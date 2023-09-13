@@ -13,7 +13,7 @@
     -> status varchar(255) 
     -> );
 
- ONE2ONE
+ --ONE2ONE
 
  CREATE TABLE contact( 
     -> contact_id int unsigned not null auto_increment,
@@ -24,7 +24,7 @@
     -> foreign key (emp_id) REFERENCES employee (emp_id) 
     );
 
- ONE2MANY
+ --ONE2MANY
 
  CREATE TABLE achievement (
     ->  achivement_id int unsigned not null  primary key auto_increment,
@@ -36,7 +36,7 @@
     -> foreign key (emp_id) references employee(emp_id)
     -> );
 
-    MANY2MANY
+ --MANY2MANY
 
   CREATE TABLE artical(
     -> artical_id int unsigned not null  primary key auto_increment);
